@@ -1,0 +1,37 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025-02-25
+  Changes:
+    - Add option to disable 2x quality module effect
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 2025-01-02
+  Locale:
+    - Add simplified Chinese translation
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2024-10-30
+  Bugfixes:
+    - Fixed crash when running with just the quality mod: no space age.
+    - The "marvelous" quality no longer shares a color with mythic.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024-10-17
+  Bugfixes:
+    - Fixed german translation not rendering strings properly
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024-10-17
+  Locale:
+    - Add german translation thanks to Luzifer Senpai
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024-10-17
+  Features:
+    - DO NOT DOWNLOAD THIS MOD
+    - Increase the level of next_probability to make getting to the higher qualities feasible
+  Graphics:
+    - Add thumbnail
+    - Improve tech icon graphics
+  Locale:
+    - Adjust quality names
