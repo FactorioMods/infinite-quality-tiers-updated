@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.5
-Date: 2025-02-25
+Version: 1.0.0
+Date: 2026-11-12
   Changes:
-    - Add option to disable 2x quality module effect
+    - This fork retains the original repeatable quality progression and its configuration options for Factorio 2.1.24. Quality support is required.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2025-01-02

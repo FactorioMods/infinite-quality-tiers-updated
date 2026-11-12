@@ -1,19 +1,23 @@
 {
-  "name": "infinite-quality-tiers",
-  "version": "1.0.5",
-  "title": "Infinite Quality Tiers",
-  "author": "notnotmelon",
+  "name": "infinite-quality-tiers-updated",
+  "version": "1.0.0",
+  "title": "Infinite Quality Tiers: Updated",
+  "author": "notnotmelon; FactorioMods (Factorio 2.1 port)",
   "homepage": "https://mods.factorio.com/mod/infinite-quality-tiers",
-  "description": "Unlimited gambling! Adds a postgame infinite technology with infinite tiers of quality.",
-  "factorio_version": "2.0",
+  "description": "Factorio 2.1 compatibility fork of infinite-quality-tiers. Unlimited gambling! Adds a postgame infinite technology with infinite tiers of quality.",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base",
-    "quality"
+    "base >= 2.1.24",
+    "quality",
+    "! infinite-quality-tiers"
   ],
   "quality_required": true,
   "space_travel_required": false,
   "spoiling_required": false,
   "freezing_required": false,
   "segmented_units_required": false,
-  "expansion_shaders_required": false
+  "expansion_shaders_required": false,
+  "migrates_from": [
+    "infinite-quality-tiers"
+  ]
 }

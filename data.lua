@@ -29,22 +29,22 @@ local function get_quality_icon(level)
     if colors[quality_name] then
         local icons = {
             {
-                icon = "__infinite-quality-tiers__/graphics/icons/quality-pips-background.png",
+                icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips-background.png",
                 icon_size = 64
             },
             {
-                icon = "__infinite-quality-tiers__/graphics/icons/quality-pips.png",
+                icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips.png",
                 icon_size = 64,
                 tint = get_color(quality_name)
             },
         }
         local tech_icons = {
             {
-                icon = "__infinite-quality-tiers__/graphics/technology/infinite-quality.png",
+                icon = "__infinite-quality-tiers-updated__/graphics/technology/infinite-quality.png",
                 icon_size = 256,
             },
             {
-                icon = "__infinite-quality-tiers__/graphics/technology/quality-pips.png",
+                icon = "__infinite-quality-tiers-updated__/graphics/technology/quality-pips.png",
                 icon_size = 256,
                 tint = get_color(quality_name)
             },
@@ -54,62 +54,62 @@ local function get_quality_icon(level)
 
     local icons = {
         {
-            icon = "__infinite-quality-tiers__/graphics/icons/quality-pips-background.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips-background.png",
             icon_size = 64
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/icons/quality-pips-1.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips-1.png",
             icon_size = 64,
             tint = get_color(quality_names[level - 0])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/icons/quality-pips-2.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips-2.png",
             icon_size = 64,
             tint = get_color(quality_names[level - 1])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/icons/quality-pips-3.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips-3.png",
             icon_size = 64,
             tint = get_color(quality_names[level - 2])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/icons/quality-pips-4.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips-4.png",
             icon_size = 64,
             tint = get_color(quality_names[level - 3])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/icons/quality-pips-5.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/icons/quality-pips-5.png",
             icon_size = 64,
             tint = get_color(quality_names[level - 4])
         }
     }
     local tech_icons = {
         {
-            icon = "__infinite-quality-tiers__/graphics/technology/infinite-quality.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/technology/infinite-quality.png",
             icon_size = 256,
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/technology/quality-pips-1.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/technology/quality-pips-1.png",
             icon_size = 256,
             tint = get_color(quality_names[level - 0])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/technology/quality-pips-2.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/technology/quality-pips-2.png",
             icon_size = 256,
             tint = get_color(quality_names[level - 1])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/technology/quality-pips-3.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/technology/quality-pips-3.png",
             icon_size = 256,
             tint = get_color(quality_names[level - 2])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/technology/quality-pips-4.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/technology/quality-pips-4.png",
             icon_size = 256,
             tint = get_color(quality_names[level - 3])
         },
         {
-            icon = "__infinite-quality-tiers__/graphics/technology/quality-pips-5.png",
+            icon = "__infinite-quality-tiers-updated__/graphics/technology/quality-pips-5.png",
             icon_size = 256,
             tint = get_color(quality_names[level - 4])
         }
@@ -133,12 +133,12 @@ for level = 5, 999 do
         next = quality_names[level + 1],
         next_probability = 0.1,
         order = "f" .. string.format("%03d", level),
-        beacon_power_usage_multiplier = 1 / 6 / (level - 4),
-        mining_drill_resource_drain_multiplier = 1 / 6 / (level - 4),
+        beacon_power_usage_multiplier = math.max(0.010001, 1 / 6 / (level - 4)),
+        mining_drill_resource_drain_multiplier = math.max(0.010001, 1 / 6 / (level - 4)),
         science_pack_drain_multiplier = (100 - level) / 100,
     }
     if quality.science_pack_drain_multiplier <= 0 then
-        quality.science_pack_drain_multiplier = (1 / 100) / (level - 98)
+        quality.science_pack_drain_multiplier = 0.010001
     end
 
     local technology_localised_name
